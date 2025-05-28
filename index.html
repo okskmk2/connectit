@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectIT - IT 솔루션 전문 기업</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#000000', secondary: '#ffffff' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=modern%2520abstract%2520technology%2520background%2520with%2520network%2520connections%2520and%2520digital%2520circuits%2520in%2520black%2520and%2520white%2520minimalist%2520style%2520with%2520subtle%2520blue%2520accent%2520perfect%2520for%2520IT%2520company%2520website%2520hero%2520section&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+    <!-- 헤더 -->
+    <header class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-xl text-black font-bold gap-2"><img style="width: 30px;"
+                    src="./favicon.svg" alt="">ConnectIT</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-black hover:text-gray-700 font-medium">회사소개</a>
+                <a href="#services" class="nav-link text-black hover:text-gray-700 font-medium">사업영역</a>
+                <a href="#projects" class="nav-link text-black hover:text-gray-700 font-medium">구축사례</a>
+                <a href="#careers" class="nav-link text-black hover:text-gray-700 font-medium">인재채용</a>
+                <a href="#contact" class="nav-link text-black hover:text-gray-700 font-medium">고객지원</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="bg-black text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-gray-800 transition-colors">상담
+                    신청</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#about" class="text-black hover:text-gray-700 font-medium py-2">회사소개</a>
+                <a href="#services" class="text-black hover:text-gray-700 font-medium py-2">사업영역</a>
+                <a href="#projects" class="text-black hover:text-gray-700 font-medium py-2">구축사례</a>
+                <a href="#careers" class="text-black hover:text-gray-700 font-medium py-2">인재채용</a>
+                <a href="#contact" class="text-black hover:text-gray-700 font-medium py-2">고객지원</a>
+                <a href="#contact"
+                    class="bg-black text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-gray-800 transition-colors inline-block text-center">상담
+                    신청</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero-section min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 w-full">
+            <div class="max-w-3xl bg-white bg-opacity-90 p-12 backdrop-blur-sm">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">IT, 핵심에 집중하도록 <br>ConnectIT가 함께합니다</h1>
+                <p class="text-xl mb-8">비즈니스 혁신의 시작, 최적의 IT 파트너 ConnectIT</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services"
+                        class="bg-black text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-gray-800 transition-colors text-center">서비스
+                        알아보기</a>
+                    <a href="#contact"
+                        class="border-2 border-black text-black px-8 py-3 !rounded-button whitespace-nowrap hover:bg-black hover:text-white transition-colors text-center">상담
+                        신청</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 회사 소개 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">회사소개</h2>
+                <p class="text-lg max-w-3xl mx-auto">ConnectIT는 고객의 비즈니스 성공을 위한 최적의 IT 솔루션을 제공합니다. 전문성과 혁신을 바탕으로 고객의
+                    비즈니스 가치 창출에 기여합니다.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-gray-200 p-8 !rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-black text-white !rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-award-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">전문성</h3>
+                    <p>다양한 산업 분야에서의 풍부한 경험과 전문 지식을 바탕으로 최적의 IT 솔루션을 제공합니다.</p>
+                </div>
+                <div class="border border-gray-200 p-8 !rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-black text-white !rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-customer-service-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">고객 중심</h3>
+                    <p>고객의 비즈니스 환경과 요구사항을 정확히 이해하고, 맞춤형 서비스를 통해 최상의 가치를 제공합니다.</p>
+                </div>
+                <div class="border border-gray-200 p-8 !rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-black text-white !rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-rocket-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">혁신</h3>
+                    <p>최신 기술 트렌드를 반영한 혁신적인 솔루션으로 고객의 비즈니스 경쟁력 강화에 기여합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 사업영역 -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">사업영역</h2>
+                <p class="text-lg max-w-3xl mx-auto">ConnectIT는 다양한 IT 서비스를 통해 고객의 비즈니스 성공을 지원합니다.</p>
+            </div>
+
+            <!-- ITO 사업 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center mb-12 gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">ITO (IT Outsourcing) 사업</h3>
+                        <p class="mb-6">고객 업무 및 프로세스에 대한 이해를 바탕으로 다양한 시스템 설계·구축과 운영 및 유지보수 아웃소싱 서비스를 제공합니다.</p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">아웃소싱 영역</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>핵심역량 강화</li>
+                                <li>리스크 관리 및 분산</li>
+                                <li>외부 전문가의 기술 활용</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">채용대행</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>채용업무의 효율화</li>
+                                <li>다양한 매체를 통한 채용공고 등록</li>
+                                <li>지원자 관리, 서류전형, 합격통보</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 !rounded-lg shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=professional%2520IT%2520team%2520working%2520in%2520modern%2520office%2520environment%2520with%2520multiple%2520screens%2520showing%2520code%2520and%2520system%2520architecture%2520diagrams%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=2&orientation=landscape"
+                            alt="ITO 서비스" class="w-full h-auto !rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SI/SM 사업 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row-reverse items-center mb-12 gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">정보서비스 통합시스템</h3>
+                        <p class="mb-6">고객의 경영 환경과 최적화된 비즈니스 프로세스 설계 및 통합 개발 서비스를 제공합니다.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold mb-2">전산시스템</h4>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>전산시스템 구축 및 기술지원</li>
+                                    <li>서버 및 백업시스템</li>
+                                    <li>소프트웨어 구축 및 연동</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">네트워크 통합</h4>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>네트워크 기술지원</li>
+                                    <li>보안솔루션 도입</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">웹 애플리케이션/모바일</h4>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>웹 어플리케이션 개발</li>
+                                    <li>모바일 앱 구축 및 운영</li>
+                                    <li>Web 개발 솔루션 개발</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">프로세스</h4>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>컨설팅/설계</li>
+                                    <li>구축/사업관리</li>
+                                    <li>시스템 안정화</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 !rounded-lg shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=system%2520integration%2520diagram%2520with%2520connected%2520components%2520showing%2520network%2520architecture%2520and%2520data%2520flow%2520between%2520different%2520systems%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=3&orientation=landscape"
+                            alt="SI/SM 서비스" class="w-full h-auto !rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 플랫폼 사업 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center mb-12 gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">플랫폼 사업</h3>
+                        <p class="mb-6">주거생활 전반의 서비스 플랫폼(마이홈즈)을 구축하고 시설운영의 효율화를 실현합니다.</p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">플랫폼 특징</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>사용자 중심의 직관적인 UI/UX</li>
+                                <li>다양한 서비스 연계 및 통합 관리</li>
+                                <li>실시간 데이터 분석 및 리포팅</li>
+                                <li>맞춤형 기능 확장 가능</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">적용 분야</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>주거 시설 관리 및 커뮤니티 서비스</li>
+                                <li>상업 시설 운영 및 관리</li>
+                                <li>스마트 시티 솔루션</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 !rounded-lg shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=modern%2520digital%2520platform%2520interface%2520showing%2520smart%2520home%2520management%2520system%2520with%2520clean%2520UI%2520elements%2520and%2520city%2520skyline%2520in%2520background%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=4&orientation=landscape"
+                            alt="플랫폼 서비스" class="w-full h-auto !rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI 사업 -->
+            <div>
+                <div class="flex flex-col md:flex-row-reverse items-center mb-12 gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">인공지능(AI) 사업</h3>
+                        <p class="mb-6">IoT, 영상, 디바이스로부터 수집된 데이터를 활용할 수 있는 인공지능 기술을 개발합니다.</p>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">AI 솔루션</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>데이터 수집 및 전처리 시스템</li>
+                                <li>머신러닝 및 딥러닝 모델 개발</li>
+                                <li>예측 분석 및 패턴 인식</li>
+                                <li>자연어 처리 및 컴퓨터 비전</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">적용 분야</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>스마트 팩토리 및 제조 공정 최적화</li>
+                                <li>비즈니스 인텔리전스 및 의사결정 지원</li>
+                                <li>고객 행동 분석 및 마케팅 자동화</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 !rounded-lg shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=artificial%2520intelligence%2520visualization%2520with%2520neural%2520network%2520connections%2520and%2520data%2520nodes%2520showing%2520machine%2520learning%2520process%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=5&orientation=landscape"
+                            alt="AI 서비스" class="w-full h-auto !rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 구축사례 -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">구축사례</h2>
+                <p class="text-lg max-w-3xl mx-auto">ConnectIT의 다양한 프로젝트 구축 사례를 소개합니다.</p>
+            </div>
+
+            <!-- 필터 버튼 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="project-filter active bg-black text-white px-6 py-2 !rounded-button whitespace-nowrap"
+                    data-filter="all">전체</button>
+                <button
+                    class="project-filter bg-white text-black border border-black px-6 py-2 !rounded-button whitespace-nowrap"
+                    data-filter="ito">ITO</button>
+                <button
+                    class="project-filter bg-white text-black border border-black px-6 py-2 !rounded-button whitespace-nowrap"
+                    data-filter="sism">SI/SM</button>
+                <button
+                    class="project-filter bg-white text-black border border-black px-6 py-2 !rounded-button whitespace-nowrap"
+                    data-filter="platform">플랫폼</button>
+                <button
+                    class="project-filter bg-white text-black border border-black px-6 py-2 !rounded-button whitespace-nowrap"
+                    data-filter="ai">AI</button>
+            </div>
+
+            <!-- 프로젝트 그리드 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 프로젝트 1 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="ito">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=enterprise%2520IT%2520infrastructure%2520management%2520system%2520with%2520server%2520racks%2520and%2520network%2520equipment%2520in%2520modern%2520data%2520center%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=6&orientation=landscape"
+                            alt="금융권 IT 인프라 구축" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">ITO</span>
+                        <h3 class="text-xl font-bold mb-2">금융권 IT 인프라 구축</h3>
+                        <p class="text-gray-700 mb-4">대형 금융기관의 IT 인프라 구축 및 운영 아웃소싱 서비스 제공</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="sism">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=enterprise%2520resource%2520planning%2520system%2520dashboard%2520with%2520analytics%2520charts%2520and%2520business%2520process%2520management%2520interface%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=7&orientation=landscape"
+                            alt="제조업 ERP 시스템 구축" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">SI/SM</span>
+                        <h3 class="text-xl font-bold mb-2">제조업 ERP 시스템 구축</h3>
+                        <p class="text-gray-700 mb-4">대규모 제조기업의 전사적 자원관리 시스템 구축 및 운영</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 3 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="platform">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=residential%2520property%2520management%2520platform%2520interface%2520showing%2520building%2520facilities%2520management%2520and%2520community%2520services%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=8&orientation=landscape"
+                            alt="주거단지 통합관리 플랫폼" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">플랫폼</span>
+                        <h3 class="text-xl font-bold mb-2">주거단지 통합관리 플랫폼</h3>
+                        <p class="text-gray-700 mb-4">대규모 주거단지의 시설관리 및 커뮤니티 서비스 플랫폼 구축</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 4 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="ai">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=smart%2520factory%2520automation%2520system%2520with%2520AI-powered%2520predictive%2520maintenance%2520dashboard%2520showing%2520equipment%2520status%2520and%2520analytics%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=9&orientation=landscape"
+                            alt="스마트 팩토리 AI 솔루션" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">AI</span>
+                        <h3 class="text-xl font-bold mb-2">스마트 팩토리 AI 솔루션</h3>
+                        <p class="text-gray-700 mb-4">제조 공정 최적화를 위한 AI 기반 예측 유지보수 시스템 구축</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 5 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="sism">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=healthcare%2520information%2520system%2520with%2520medical%2520records%2520management%2520and%2520patient%2520data%2520analytics%2520interface%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=10&orientation=landscape"
+                            alt="의료정보시스템 구축" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">SI/SM</span>
+                        <h3 class="text-xl font-bold mb-2">의료정보시스템 구축</h3>
+                        <p class="text-gray-700 mb-4">종합병원의 환자 관리 및 의료정보 통합 시스템 구축</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 6 -->
+                <div class="project-card bg-white shadow-lg !rounded-lg overflow-hidden border border-gray-100"
+                    data-category="ito">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=corporate%2520IT%2520help%2520desk%2520and%2520technical%2520support%2520team%2520working%2520in%2520modern%2520office%2520environment%2520black%2520and%2520white%2520minimalist%2520style&width=600&height=400&seq=11&orientation=landscape"
+                            alt="기업 IT 헬프데스크 운영" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-block bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 !rounded-full mb-3">ITO</span>
+                        <h3 class="text-xl font-bold mb-2">기업 IT 헬프데스크 운영</h3>
+                        <p class="text-gray-700 mb-4">글로벌 기업의 IT 헬프데스크 및 기술지원 서비스 운영</p>
+                        <a href="#" class="text-black font-medium flex items-center">
+                            자세히 보기
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인재채용 -->
+    <section id="careers" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">인재채용</h2>
+                <p class="text-lg max-w-3xl mx-auto">ConnectIT와 함께 성장할 인재를 찾습니다.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">인재상</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-user-star-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">전문성</h4>
+                                <p>자신의 분야에서 전문성을 갖추고 지속적으로 발전하기 위해 노력하는 인재</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-team-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">협업</h4>
+                                <p>다양한 배경과 관점을 존중하며 팀워크를 통해 시너지를 창출하는 인재</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-creative-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">창의성</h4>
+                                <p>새로운 아이디어와 접근 방식으로 문제를 해결하고 혁신을 추구하는 인재</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">채용 공고</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-white p-6 !rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">백엔드 개발자</h4>
+                                <span class="text-sm bg-black text-white px-3 py-1 !rounded-full">경력</span>
+                            </div>
+                            <p class="text-sm mb-4">Java, Spring Framework 기반 백엔드 시스템 개발 및 운영</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">2025.05.15 ~ 2025.06.15</span>
+                                <a href="#" class="text-black font-medium text-sm flex items-center">
+                                    상세보기
+                                    <i class="ri-arrow-right-s-line ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 !rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">프론트엔드 개발자</h4>
+                                <span class="text-sm bg-black text-white px-3 py-1 !rounded-full">경력</span>
+                            </div>
+                            <p class="text-sm mb-4">React, Vue.js 기반 웹 애플리케이션 UI/UX 개발</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">2025.05.20 ~ 2025.06.20</span>
+                                <a href="#" class="text-black font-medium text-sm flex items-center">
+                                    상세보기
+                                    <i class="ri-arrow-right-s-line ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 !rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">AI 엔지니어</h4>
+                                <span class="text-sm bg-black text-white px-3 py-1 !rounded-full">신입/경력</span>
+                            </div>
+                            <p class="text-sm mb-4">머신러닝, 딥러닝 모델 개발 및 데이터 분석</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">2025.05.25 ~ 2025.06.25</span>
+                                <a href="#" class="text-black font-medium text-sm flex items-center">
+                                    상세보기
+                                    <i class="ri-arrow-right-s-line ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-8">
+                            <a href="#"
+                                class="inline-block border-2 border-black text-black px-6 py-2 !rounded-button whitespace-nowrap hover:bg-black hover:text-white transition-colors">
+                                전체 채용공고 보기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 고객지원 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">고객지원</h2>
+                <p class="text-lg max-w-3xl mx-auto">ConnectIT의 전문가들이 고객의 비즈니스 성공을 위한 최적의 솔루션을 제안해 드립니다.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="w-full md:w-1/2 bg-gray-50 p-8 !rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6">상담 신청</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium mb-2">이름 *</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="company" class="block text-sm font-medium mb-2">회사명 *</label>
+                            <input type="text" id="company"
+                                class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium mb-2">이메일 *</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-medium mb-2">연락처 *</label>
+                            <input type="tel" id="phone"
+                                class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-sm font-medium mb-2">관심 서비스 *</label>
+                            <div class="relative">
+                                <select id="service"
+                                    class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black appearance-none pr-8"
+                                    required>
+                                    <option value="" disabled selected>선택해주세요</option>
+                                    <option value="ito">IT 아웃소싱 (ITO)</option>
+                                    <option value="sism">시스템 통합/관리 (SI/SM)</option>
+                                    <option value="platform">플랫폼 사업</option>
+                                    <option value="ai">인공지능(AI) 사업</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-2">문의 내용 *</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 !rounded-lg border border-gray-300 focus:outline-none focus:border-black"
+                                required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-5 h-5 mr-2 border-none" required>
+                                <span class="text-sm">개인정보 수집 및 이용에 동의합니다. *</span>
+                            </label>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-black text-white py-3 !rounded-button whitespace-nowrap hover:bg-gray-800 transition-colors">상담
+                            신청하기</button>
+                    </form>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">연락처 정보</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-map-pin-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">주소</h4>
+                                <p>서울시 금천구 가산디지털1로 181, 804호(가산동, 가산더블류센터)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-phone-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">전화</h4>
+                                <p>02-1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-black text-white !rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                <i class="ri-mail-line ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">이메일</h4>
+                                <p>info@connectit.co.kr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-6">찾아오시는 길</h3>
+                        <div class="bg-gray-100 h-64 !rounded-lg overflow-hidden">
+                            <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="지도"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 푸터 -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between mb-12">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">ConnectIT</a>
+                    <p class="max-w-xs">비즈니스 혁신의 시작, 최적의 IT 파트너 ConnectIT가 함께합니다.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">사업영역</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">IT 아웃소싱 (ITO)</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">시스템 통합/관리 (SI/SM)</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">플랫폼 사업</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">인공지능(AI) 사업</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">회사 정보</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">회사소개</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">구축사례</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">인재채용</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">고객지원</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">고객지원</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">문의하기</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">자주 묻는 질문</a></li>
+                            <li><a href="#" class="hover:text-gray-300 transition-colors">자료실</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm text-gray-400">© 2025 ConnectIT. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-4 text-sm text-gray-400">
+                    <p>사업자등록번호: 123-45-67890 | 대표: 김세희 | 주소: 서울시 금천구 가산디지털1로 181, 804호(가산동, 가산더블류센터)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 스크립트 -->
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 모바일 메뉴 항목 클릭 시 메뉴 닫기
+            const mobileMenuItems = mobileMenu.querySelectorAll('a');
+            mobileMenuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="project-filter-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.project-filter');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // 모든 버튼에서 active 클래스 제거
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-black', 'text-white');
+                        btn.classList.add('bg-white', 'text-black', 'border', 'border-black');
+                    });
+
+                    // 클릭된 버튼에 active 클래스 추가
+                    this.classList.add('active', 'bg-black', 'text-white');
+                    this.classList.remove('bg-white', 'text-black', 'border', 'border-black');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // 헤더 높이 고려
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
