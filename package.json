@@ -1,0 +1,27 @@
+{
+  "name": "connectit",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install",
+    "deploy": "gcloud config set project connectit-461213 && gcloud app deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okskmk2/connectit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okskmk2/connectit/issues"
+  },
+  "homepage": "https://github.com/okskmk2/connectit#readme",
+  "description": "",
+  "dependencies": {
+    "koa": "^3.0.0",
+    "koa-router": "^13.0.1",
+    "koa-static": "^5.0.0"
+  }
+}
